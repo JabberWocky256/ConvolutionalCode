@@ -4,3 +4,11 @@ c:\users\alexander\documents\visual studio 2015\Projects\ConvolutionalСode\Conv
 c:\users\alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\App.g.cs
 c:\users\alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\ConvolutionalСode_MarkupCompile.cache
 c:\users\alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\ConvolutionalСode_MarkupCompile.lref
+C:\Users\Alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\bin\Debug\ConvolutionalСode.exe
+C:\Users\Alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\bin\Debug\ConvolutionalСode.pdb
+C:\Users\Alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\MainWindow.baml
+C:\Users\Alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\ConvolutionalСode.g.resources
+C:\Users\Alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\ConvolutionalСode.Properties.Resources.resources
+C:\Users\Alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\ConvolutionalСode.csproj.GenerateResource.Cache
+C:\Users\Alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\ConvolutionalСode.exe
+C:\Users\Alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\ConvolutionalСode.pdb

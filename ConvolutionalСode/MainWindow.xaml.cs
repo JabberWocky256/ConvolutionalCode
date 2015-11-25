@@ -23,6 +23,7 @@ namespace ConvolutionalСode
         public MainWindow()
         {
             InitializeComponent();
+            ConvolutionalСode.source.ExecutorFile.Neprerivniy();
         }
     }
 }

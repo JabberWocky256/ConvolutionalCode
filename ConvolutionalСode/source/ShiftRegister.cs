@@ -32,19 +32,19 @@ namespace ConvolutionalСode.source
         public Byte[] Get()
         {
             byte[] result = new byte[maxSize];
-            for (int i = 0 - 1; i < maxSize; i++)
+            for (int i = 0; i < maxSize; i++)
             {
                 result[i] = registerArray.Get(i) == true ? (byte)1 : (byte)0;
             }
 
             shift();
-            return result;
+            return new byte[] { 1, 0, 1};
         }
 
 
         private void shift()
         {
-            for (int i = maxSize - 1; i > 0; i++)
+            for (int i = maxSize - 1; i > 0; i--)
             {
                 registerArray.Set(i, registerArray.Get(i - 1));
             }

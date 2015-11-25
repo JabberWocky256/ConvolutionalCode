@@ -11,16 +11,18 @@ namespace ConvolutionalСode.source
         ShiftRegister register = new ShiftRegister(3);
         BitGenerator generator = new BitGenerator();
 
-        public void NewBit()
+        public byte NewBit()
         {
-            register.put(generator.Next());
+            byte generated = generator.Next();
+            register.put(generated);
+            return generated;
         }
 
         public byte[] Get()
         {
             byte[] outPut = register.Get();
-            int adder1 = Adder.add((byte)Adder.add(outPut[0], outPut[1]), outPut[2]);
-            int adder2 = (byte)Adder.add(outPut[0], outPut[2]);
+            int adder1 = Adder.Add(new byte[] { outPut[0], outPut[1], outPut[2] });
+            int adder2 = (byte)Adder.Add(outPut[0], outPut[2]);
             outPut = new byte[2];
             outPut[0] = (byte) adder1;
             outPut[1] = (byte) adder2;

@@ -13,7 +13,7 @@ namespace ConvolutionalСode.source
         public byte Next()
         {
             byte bite = 0;
-            bite = rand.Next() >= 0.5 ? (byte)0 : (byte)1;
+            bite = rand.NextDouble() >= 0.5 ? (byte)0 : (byte)1;
             return bite;
         }
     }
