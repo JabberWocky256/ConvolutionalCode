@@ -5,8 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConvolutionalСode"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Свёрточные коды" Height="280" Width="520" FontFamily="Consolas" FontSize="14" WindowStartupLocation="CenterScreen" Background="#FFECF0F1">
+    <Grid Background="#FFECF0F1">
+        <Grid.Resources>
+            <Style  TargetType="MenuItem">
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="true">
+                        <Setter Property="Background" Value="#ecf0f1" />
+                    </Trigger>
+                    <Trigger Property="IsKeyboardFocusWithin" Value="true">
+                        <Setter Property="Background" Value="#ecf0f1" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="312*" />
+        </Grid.RowDefinitions>
+        <Menu FontFamily="Consolas" FontSize="15" Foreground="#FF2C3E50" BorderBrush="#FF2C3E50" BorderThickness="0">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel VerticalAlignment="Bottom"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+
+            <MenuItem Name="MenuItemStatement" Click="MenuItemStatement_Click">
+                <MenuItem.Header>
+                    <TextBlock Text="Систематический" VerticalAlignment="Center" Margin="-5,0,0,0"/>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Name="MenuItemSpeciality" Click="MenuItemSpeciality_Click">
+                <MenuItem.Header>
+                    <TextBlock Text="Несистематический" VerticalAlignment="Center" Margin="-5,0,0,0"/>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Name="MenuItemFaculty" Click="MenuItemFaculty_Click">
+                <MenuItem.Header>
+                    <TextBlock Text="Катастрофический" VerticalAlignment="Center" Margin="-5,0,0,0"/>
+                </MenuItem.Header>
+            </MenuItem>
+          
+            <MenuItem Header="Выйти" HorizontalAlignment="Right" VerticalAlignment="Center" Click="MenuItem_Click">
+            </MenuItem>
+            <Menu.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="#FFECF0F1" Offset="1" />
+                </LinearGradientBrush>
+            </Menu.Background>
+        </Menu>
+        <Border BorderBrush="#FF2C3E50" BorderThickness="1" Grid.Row="1" Height="1" Name="border1" VerticalAlignment="Top" HorizontalAlignment="Stretch" />
     </Grid>
 </Window>

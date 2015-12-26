@@ -9,11 +9,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConvolutionalСode</RootNamespace>
     <AssemblyName>ConvolutionalСode</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,11 +56,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="source\Adder.cs" />
-    <Compile Include="source\ExecutorFile.cs" />
-    <Compile Include="source\Neprerivniy.cs" />
-    <Compile Include="source\ShiftRegister.cs" />
-    <Compile Include="source\BitGenerator.cs" />
+    <Compile Include="CatastrophicalCodeWindow.xaml.cs">
+      <DependentUpon>CatastrophicalCodeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="source\BaseCode.cs" />
+    <Compile Include="source\Catostrophycal.cs" />
+    <Compile Include="source\Main.cs" />
+    <Compile Include="source\Nesystem.cs" />
+    <Compile Include="source\System.cs" />
+    <Compile Include="SystemCodeWindow.xaml.cs">
+      <DependentUpon>SystemCodeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UnsystemCodeWindow.xaml.cs">
+      <DependentUpon>UnsystemCodeWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CatastrophicalCodeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,6 +86,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Resources\UserControl2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControlInput.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SystemCodeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UnsystemCodeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -99,6 +129,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\Basic-Student-icon.png" />
+    <Resource Include="Images\edit.png" />
+    <Resource Include="Images\faculty.png" />
+    <Resource Include="Images\facultybutton.png" />
+    <Resource Include="Images\rating.png" />
+    <Resource Include="Images\remove.png" />
+    <Resource Include="Images\speciality.png" />
+    <Resource Include="Images\stat.png" />
+    <Resource Include="Images\statements.png" />
+    <Resource Include="Images\university32.png" />
+    <Resource Include="Images\university321.png" />
+    <Resource Include="Images\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Image1.png" />
+    <Resource Include="Resources\university32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

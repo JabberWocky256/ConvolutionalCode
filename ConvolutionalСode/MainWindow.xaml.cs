@@ -23,7 +23,30 @@ namespace ConvolutionalСode
         public MainWindow()
         {
             InitializeComponent();
-            ConvolutionalСode.source.ExecutorFile.Neprerivniy();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MenuItemStatement_Click(object sender, RoutedEventArgs e)
+        {
+            SystemCodeWindow sWindow = new SystemCodeWindow();
+            sWindow.ShowDialog();
+
+        }
+
+        private void MenuItemSpeciality_Click(object sender, RoutedEventArgs e)
+        {
+            UnsystemCodeWindow window = new UnsystemCodeWindow();
+            window.ShowDialog();
+        }
+
+        private void MenuItemFaculty_Click(object sender, RoutedEventArgs e)
+        {
+            CatastrophicalCodeWindow window = new CatastrophicalCodeWindow();
+            window.ShowDialog();
         }
     }
 }

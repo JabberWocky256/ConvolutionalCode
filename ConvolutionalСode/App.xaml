@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:ConvolutionalСode"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="Resources/UserControlInput.xaml" />
+
     </Application.Resources>
 </Application>
