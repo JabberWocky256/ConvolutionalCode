@@ -12,3 +12,12 @@ C:\Users\Alexander\documents\visual studio 2015\Projects\ConvolutionalСode\Conv
 C:\Users\Alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\ConvolutionalСode.csproj.GenerateResource.Cache
 C:\Users\Alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\ConvolutionalСode.exe
 C:\Users\Alexander\documents\visual studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\ConvolutionalСode.pdb
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\CatastrophicalCodeWindow.baml
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\Resources\UserControl2.baml
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\Resources\UserControlInput.baml
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\SystemCodeWindow.baml
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\UnsystemCodeWindow.baml
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\CatastrophicalCodeWindow.g.cs
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\SystemCodeWindow.g.cs
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\UnsystemCodeWindow.g.cs
+C:\Users\Alexander\Documents\Visual Studio 2015\Projects\ConvolutionalСode\ConvolutionalСode\obj\Debug\App.baml
