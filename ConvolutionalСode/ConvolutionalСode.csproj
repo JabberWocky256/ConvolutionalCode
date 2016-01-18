@@ -64,6 +64,7 @@
     <Compile Include="source\Main.cs" />
     <Compile Include="source\Nesystem.cs" />
     <Compile Include="source\System.cs" />
+    <Compile Include="source\UniversalEncoder.cs" />
     <Compile Include="SystemCodeWindow.xaml.cs">
       <DependentUpon>SystemCodeWindow.xaml</DependentUpon>
     </Compile>

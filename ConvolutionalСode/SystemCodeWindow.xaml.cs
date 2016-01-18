@@ -42,7 +42,10 @@ namespace ConvolutionalСode
 
         private void textBox3_TextChanged(object sender, TextChangedEventArgs e)
         {
-            textBox3_Copy.Text = systematical.DeCode(textBox3.Text);
+            //textBox3_Copy.Text = systematical.DeCode(textBox3.Text);
+            string code = systematical.Code("11001101");
+            string asnwer = systematical.DeCode("111100011100");
+            asnwer += asnwer + "2";
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

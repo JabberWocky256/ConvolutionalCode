@@ -37,49 +37,9 @@ namespace ConvolutionalСode.source
             return result;
         }
 
-        public ArrayList DeCodeForPotentialResult(string data)
+        public string DeCode(string data)
         {
-            if (data.Length % 2 != 0)
-            {
-                return null;
-            }
-
-            char[] inputData = data.ToCharArray();
-            ArrayList potentialResult = new ArrayList();
-            for (int i = 1; i < inputData.Length; i = i + 2)
-            {
-                AddPotentialResult(potentialResult, inputData, i);
-            }
-
-            
-            return potentialResult;
-        }
-
-        private void checkForEquals(Dictionary<string, int> accounts, ArrayList potentialResulе, int index, int length)
-        {
-            foreach (string threChars in potentialResulе)
-            {
-                for (int i = 0; i < values.Length / 2; i++)
-                {
-                    string key = values[i, 0];
-                    if (key.Substring(index, length).Equals(threChars.Substring(index, length)))
-                    {
-                        accounts[key] = accounts[key] + 1;
-                    }
-                }
-            }
-        }
-
-        private void AddPotentialResult(ArrayList potentialResult, char[] inputData, int i)
-        {
-            string twoChars = inputData[i - 1].ToString() + inputData[i].ToString();
-            for (int j = 0; j < values.Length / 2; j++)
-            {
-                if (values[j, 1].Equals(twoChars))
-                {
-                    potentialResult.Add(values[j, 0]);
-                }
-            }
+            return UniversalEncoder.Encode(this, data);
         }
     }
 }
