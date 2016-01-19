@@ -26,19 +26,20 @@ namespace ConvolutionalСode
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            textBox3.Text = unsystem.Code(textBox2.Text);
-        }
-
-        private void textBox3_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            textBox3_Copy.Text = unsystem.DeCode(textBox3.Text);
-        }
-
-        private void button1_Click(object sender, RoutedEventArgs e)
+       private void button1_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonCode_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            unsystem.BufferSize = 5;
+
+            string[] generators = new string[] { "10001", "11111"};
+            textBox3.Text = (unsystem.Encode(generators, textBox2.Text));
+
+           // MessageBox.Show(unsystem.Adder("110", "100").ToString());
+            
         }
     }
 }
