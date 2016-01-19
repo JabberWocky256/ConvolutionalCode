@@ -33,7 +33,8 @@ namespace ConvolutionalСode
 
         private void textBox3_TextChanged(object sender, TextChangedEventArgs e)
         {
-            textBox3_Copy.Text = catastrophical.DeCode(textBox3.Text);
+            if(textBox3.Text.Length > 4)
+            textBox3_Copy.Text = catastrophical.DeCode(textBox3.Text.Substring(4));
 
         }
 

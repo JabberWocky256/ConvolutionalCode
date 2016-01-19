@@ -9,7 +9,21 @@ namespace ConvolutionalСode.source
 {
     abstract class BaseCode
     {
+        public int BufferSize { get; set; }
+        public string[] FunctionalGenerators { get; set; }
+
+
         private string[,] values;
+
+        public BaseCode() { }
+
+
+        public BaseCode(int bufferSize, string[] generators)
+        {
+            this.BufferSize = bufferSize;
+            this.FunctionalGenerators = generators;
+        }
+
 
         protected void SetCodeValues(string[,] values)
         {
@@ -18,6 +32,7 @@ namespace ConvolutionalСode.source
 
         public string Code(string data)
         {
+            data = "00" + data;
             string result = "";
             char[] inputData = data.ToCharArray();
             for (int i = 2; i < inputData.Length; i++)
@@ -39,7 +54,144 @@ namespace ConvolutionalСode.source
 
         public string DeCode(string data)
         {
-            return UniversalEncoder.Encode(this, data);
+            return UniversalDecoder.Decode(this, data, data.Length / 2 + 2);
         }
+
+
+
+        
+
+
+
+
+        public string Encode(string[] generators, string inputData)
+        {
+            Stack<char> resultStack = new Stack<char>();
+
+            FunctionalGenerators = generators;
+
+            string res = "";
+
+            List<char> currentBuffer = new List<char>(BufferSize);
+            for (int i = 0; i < BufferSize; i++)
+            {
+                currentBuffer.Add('0');
+            }
+            
+            //for (int i = inputData.Length - 1; i >= 0; i--)
+            
+            for (int i = 0; i < inputData.Length; i++)
+            {
+                for (int j = BufferSize - 1; j > 0; j--)
+                {
+                    currentBuffer[j] = currentBuffer[j - 1];
+                }
+                currentBuffer[0] = inputData[i];
+
+                for (int j = 0; j < FunctionalGenerators.Length; j++)
+                {
+                    res += (ConvertBooleanToChar(Adder(FunctionalGenerators[j], currentBuffer)));
+                }
+
+                //res += " ";
+                //resultStack.Push(ConvertBooleanToChar(Adder("101", currentBuffer)));               
+                //resultStack.Push(ConvertBooleanToChar(Adder("110", currentBuffer)));
+                //resultStack.Push(' ');
+
+                //res += ConvertBooleanToChar(Adder("111", currentBuffer));
+                //res += ConvertBooleanToChar(Adder("011", currentBuffer));
+                //res += ConvertBooleanToChar(Adder("101", currentBuffer));
+                //res += " ";
+            }
+
+            return res;
+            //return String.Concat(
+            //    resultStack.Where(c => resultStack.Contains(c)));
+        }
+
+
+        public string Encode(string inputData)
+        {
+            Stack<char> resultStack = new Stack<char>();
+
+            string res = "";
+
+            List<char> currentBuffer = new List<char>(BufferSize);
+            for (int i = 0; i < BufferSize; i++)
+            {
+                currentBuffer.Add('0');
+            }
+
+            //for (int i = inputData.Length - 1; i >= 0; i--)
+
+            for (int i = 0; i < inputData.Length; i++)
+            {
+                for (int j = BufferSize - 1; j > 0; j--)
+                {
+                    currentBuffer[j] = currentBuffer[j - 1];
+                }
+                currentBuffer[0] = inputData[i];
+
+                for (int j = 0; j < FunctionalGenerators.Length; j++)
+                {
+                    res += (ConvertBooleanToChar(Adder(FunctionalGenerators[j], currentBuffer)));
+                }
+
+                //res += " ";
+                //resultStack.Push(ConvertBooleanToChar(Adder("101", currentBuffer)));               
+                //resultStack.Push(ConvertBooleanToChar(Adder("110", currentBuffer)));
+                //resultStack.Push(' ');
+
+                //res += ConvertBooleanToChar(Adder("111", currentBuffer));
+                //res += ConvertBooleanToChar(Adder("011", currentBuffer));
+                //res += ConvertBooleanToChar(Adder("101", currentBuffer));
+                //res += " ";
+            }
+
+            return res;
+            //return String.Concat(
+            //    resultStack.Where(c => resultStack.Contains(c)));
+        }
+
+
+        // returns bool value for one iteration of single generator
+        private bool Adder(string functionalGenerator, List<char> currentBuffer)
+        {
+
+           // List<char> buffer = currentBuffer.ToList<char>();
+
+            char[] generatorArray = functionalGenerator.ToCharArray();
+            
+            List<bool> valuesToAdd = new List<bool>(); // copy values for further XOR operations
+
+            for (int i = 0; i < generatorArray.Length; i++)
+            {
+                if (generatorArray[i] == '1')
+                {
+                    valuesToAdd.Add(ConvertCharToBoolean(currentBuffer[i]));
+                }
+            }
+
+            bool result = Convert.ToBoolean(valuesToAdd[0]);
+            
+            for (int i = 1; i < valuesToAdd.Count; i++)
+            {
+                result ^= valuesToAdd[i];
+            }
+
+            return result;
+        }
+
+
+        private bool ConvertCharToBoolean(char input)
+        {
+            return (input == '0') ? false : true;
+        }
+
+        private char ConvertBooleanToChar(bool input)
+        {
+            return (input == false) ? '0' : '1';
+        }
+
     }
 }
