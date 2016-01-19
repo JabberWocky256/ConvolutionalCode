@@ -10,10 +10,20 @@ namespace ConvolutionalСode.source
     abstract class BaseCode
     {
         public int BufferSize { get; set; }
-        public string[] functionalGenerators { get; set; }
+        public string[] FunctionalGenerators { get; set; }
 
 
         private string[,] values;
+
+        public BaseCode() { }
+
+
+        public BaseCode(int bufferSize, string[] generators)
+        {
+            this.BufferSize = bufferSize;
+            this.FunctionalGenerators = generators;
+        }
+
 
         protected void SetCodeValues(string[,] values)
         {
@@ -58,7 +68,7 @@ namespace ConvolutionalСode.source
         {
             Stack<char> resultStack = new Stack<char>();
 
-            functionalGenerators = generators;
+            FunctionalGenerators = generators;
 
             string res = "";
 
@@ -78,9 +88,9 @@ namespace ConvolutionalСode.source
                 }
                 currentBuffer[0] = inputData[i];
 
-                for (int j = 0; j < functionalGenerators.Length; j++)
+                for (int j = 0; j < FunctionalGenerators.Length; j++)
                 {
-                    res += (ConvertBooleanToChar(Adder(functionalGenerators[j], currentBuffer)));
+                    res += (ConvertBooleanToChar(Adder(FunctionalGenerators[j], currentBuffer)));
                 }
 
                 //res += " ";
@@ -122,9 +132,9 @@ namespace ConvolutionalСode.source
                 }
                 currentBuffer[0] = inputData[i];
 
-                for (int j = 0; j < functionalGenerators.Length; j++)
+                for (int j = 0; j < FunctionalGenerators.Length; j++)
                 {
-                    res += (ConvertBooleanToChar(Adder(functionalGenerators[j], currentBuffer)));
+                    res += (ConvertBooleanToChar(Adder(FunctionalGenerators[j], currentBuffer)));
                 }
 
                 //res += " ";

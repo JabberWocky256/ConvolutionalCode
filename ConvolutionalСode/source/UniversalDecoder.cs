@@ -11,7 +11,7 @@ namespace ConvolutionalСode.source
 
         public static string Decode(BaseCode code, String message)
         {
-            int length = (message.Length) / (code.functionalGenerators.Length);
+            int length = (message.Length) / (code.FunctionalGenerators.Length);
             //int length = 0;
             //string fakeM = "";
             //while (message.Length != length)
