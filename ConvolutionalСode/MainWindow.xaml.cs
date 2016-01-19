@@ -28,7 +28,7 @@ namespace ConvolutionalСode
 
             //default values
             baseCode.BufferSize = 3;
-            string[] generators = new string[] { "111", "100"};
+            string[] generators = new string[] { "110", "101"};
 
             baseCode.FunctionalGenerators = generators;
 
