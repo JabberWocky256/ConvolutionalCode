@@ -78,8 +78,7 @@ namespace ConvolutionalСode
 
         private void MenuItemFaculty_Click(object sender, RoutedEventArgs e)
         {
-            CatastrophicalCodeWindow window = new CatastrophicalCodeWindow();
-            window.ShowDialog();
+            MessageBox.Show("Свёрточные коды. ");
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

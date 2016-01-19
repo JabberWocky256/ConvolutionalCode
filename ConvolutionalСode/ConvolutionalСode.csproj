@@ -59,12 +59,18 @@
     <Compile Include="CatastrophicalCodeWindow.xaml.cs">
       <DependentUpon>CatastrophicalCodeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DialogAddWindow.xaml.cs">
+      <DependentUpon>DialogAddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DialogWindow.xaml.cs">
+      <DependentUpon>DialogWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="source\BaseCode.cs" />
     <Compile Include="source\Catostrophycal.cs" />
     <Compile Include="source\Main.cs" />
     <Compile Include="source\Nesystem.cs" />
     <Compile Include="source\System.cs" />
-    <Compile Include="source\UniversalEncoder.cs" />
+    <Compile Include="source\UniversalDecoder.cs" />
     <Compile Include="SystemCodeWindow.xaml.cs">
       <DependentUpon>SystemCodeWindow.xaml</DependentUpon>
     </Compile>
@@ -74,6 +80,14 @@
     <Page Include="CatastrophicalCodeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DialogAddWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DialogWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
