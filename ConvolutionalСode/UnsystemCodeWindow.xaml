@@ -1,7 +1,7 @@
 ﻿<Window x:Class="ConvolutionalСode.UnsystemCodeWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-Title="Несистематический код" Height="480" Width="480" Background="#FFECF0F1" FontFamily="Consolas" FontSize="13" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+Title="Несистематический код" Height="480" Width="760" Background="#FFECF0F1" FontFamily="Consolas" FontSize="13" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,26">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="164*" />
@@ -27,6 +27,6 @@ Title="Несистематический код" Height="480" Width="480" Backg
         <Label Content="Декодированная комбинация" Grid.Row="2" Height="45" HorizontalAlignment="Left" Margin="28,10,0,0" x:Name="label3_Copy" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="30,42,0,0" x:Name="textBox3_Copy" VerticalAlignment="Top" Width="387" Grid.Row="2" Style="{StaticResource ControlBaseStyleInput}" Grid.ColumnSpan="2" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="30,10,0,0" x:Name="textBox3_Copy1" VerticalAlignment="Top" Width="387" Grid.Row="5" Style="{StaticResource ControlBaseStyleInput}" Grid.ColumnSpan="2" />
-        <Button Content="Code" Grid.Row="1" Height="20" HorizontalAlignment="Left" x:Name="buttonCode_Copy" VerticalAlignment="Bottom" Width="49" Style="{StaticResource MetroButton}" BorderThickness="0" Foreground="White" Background="#FF3498DB" Grid.Column="1" Margin="146,0,0,41" Click="buttonCode_Copy_Click" />
+        <Button Content="Code" Grid.Row="1" HorizontalAlignment="Left" x:Name="buttonCode_Copy" Width="49" Style="{StaticResource MetroButton}" BorderThickness="0" Foreground="White" Background="#FF3498DB" Grid.Column="1" Margin="146,0,0,41" Click="buttonCode_Copy_Click" />
     </Grid>
 </Window>

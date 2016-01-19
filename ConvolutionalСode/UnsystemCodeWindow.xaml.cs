@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConvolutionalСode.source;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,10 +34,12 @@ namespace ConvolutionalСode
 
         private void buttonCode_Copy_Click(object sender, RoutedEventArgs e)
         {
-            unsystem.BufferSize = 5;
+            unsystem.BufferSize = 3;
 
-            string[] generators = new string[] { "10001", "11111"};
+            string[] generators = new string[] { "111", "100", "011"};
             textBox3.Text = (unsystem.Encode(generators, textBox2.Text));
+
+            textBox3_Copy.Text = UniversalDecoder.Decode(unsystem, textBox3.Text);
 
            // MessageBox.Show(unsystem.Adder("110", "100").ToString());
             
